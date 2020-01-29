@@ -1,5 +1,6 @@
 {
   "name": "sveltestrap",
+  "private": true,
   "version": "3.3.2",
   "main": "dist/sveltestrap.js",
   "module": "dist/sveltestrap.es.js",
@@ -10,14 +11,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:bestguy/sveltestrap.git"
+    "url": "git+ssh://git@github.com/fantasyui-com/sveltestrap.git"
   },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "start": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006 -s ./public",
     "docs": "build-storybook -o docs",
     "dist": "rollup -c",
     "lint": "eslint ./src --ext .js --ext .svelte",
@@ -93,5 +94,15 @@
     "lodash.isobject": "^3.0.2",
     "lodash.tonumber": "^4.0.3"
   },
-  "browserslist": "last 2 versions"
+  "browserslist": "last 2 versions",
+  "description": "![Logo](./logo.png)",
+  "bugs": {
+    "url": "https://github.com/fantasyui-com/sveltestrap/issues"
+  },
+  "homepage": "https://github.com/fantasyui-com/sveltestrap#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "",
+  "license": "ISC"
 }

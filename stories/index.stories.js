@@ -28,13 +28,30 @@ import Toast from './toast/Index.svelte';
 import Tooltip from './tooltip/Index.svelte';
 import Welcome from './welcome/Index.svelte';
 
+// Widgets
+import Illustration from './illustration/Index.svelte';
+import Business from './business/Index.svelte';
+import Link from './link/Index.svelte';
+import Poem from './poem/Index.svelte';
+import Quote from './quote/Index.svelte';
+import Text from './text/Index.svelte';
+import Youtube from './youtube/Index.svelte';
+
+
+
+
+
+
+
+
+
 const story = Component => () => ({
   Component
 });
 
-storiesOf('Introduction', module)
+  storiesOf('Introduction', module)
   .add('Get Started', story(Welcome))
-  
+
   storiesOf('Components', module)
   .add('Layout', story(Grid))
   .add('Alert', story(Alert))
@@ -61,4 +78,13 @@ storiesOf('Introduction', module)
   .add('Spinner', story(Spinner))
   .add('Table', story(Tables))
   .add('Toast', story(Toast))
-  .add('Tooltip', story(Tooltip));
+  .add('Tooltip', story(Tooltip))
+
+  storiesOf('Widgets', module)
+  .add('Illustration', story(Illustration))
+  .add('Business', story(Business))
+  .add('Link', story(Link))
+  .add('Poem', story(Poem))
+  .add('Quote', story(Quote))
+  .add('Text', story(Text))
+  .add('Youtube', story(Youtube))

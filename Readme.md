@@ -1,36 +1,16 @@
-![Logo](./logo.png)
+Extended Bootstrap Components
 
-## Bootstrap 4 components for Svelte v3
-
-**Work in progress, check back soon - PRs are welcome!**
-
-The philosophy of this library is to provide all Bootstrap 4 components for a [Svelte](https://svelte.dev) app, without needing to use Bootstrap component classes or needing to include Bootstrap's JavaScript.
-
-However, to make using Bootstrap themes easier, this library does _not_ embed Bootstrap styles directly and you will need to include Bootstrap 4 CSS in your page.
-
-The component names and interface are inspired by the [reactstrap](https://reactstrap.github.io) library for React.
-
-[Demo page](https://bestguy.github.io/sveltestrap/)
-
-### Status
-
-* See component list below
-  * Tooltip & Popover are not implemented yet due to lacking Popper/Tether support [#31](https://github.com/bestguy/sveltestrap/issues/31), [#32](https://github.com/bestguy/sveltestrap/issues/32)
-  * Carousel not implemented yet, need to port transitions/state/key handlers. [#30](https://github.com/bestguy/sveltestrap/issues/30)
-* Some stateful components have issues
-  * Collapse uses the Svelte slide transistion. In Svelte, the component is removed from the DOM whereas in Bootstrap, it stays in the DOM, but is hidden. This interacts badly with nav bars on small screens.
-  * Modal uses Svelte fade transition, which does not use the Bootstrap theme defaults for duration, etc.
-* Most components are missing general DOM events, see [#36](https://github.com/bestguy/sveltestrap/issues/36)
-
-----
+[Demo page](https://fantasyui.com)
 
 ## Install
 
-`npm install --save svelte sveltestrap`
+`npm install --save ???`
 
 ## Usage
 
 _You need to include a link to Bootstrap 4 stylesheet in your page - these components do not include or embed any Bootstrap styles automatically._
+
+To make using Bootstrap themes easier, this library does _not_ embed Bootstrap styles directly and you will need to include Bootstrap 4 CSS in your page.
 
 Either in your HTML layout:
 
@@ -64,7 +44,7 @@ In your svelte component:
 
 ### Note on server-side rendering (SSR) Usage:
 
-If you are using Sveltestrap in an SSR environment like Sapper, 
+If you are using Sveltestrap in an SSR environment like Sapper,
 it's recommended you import the component source directly, for example:
 
 ```html
@@ -81,21 +61,11 @@ it's recommended you import the component source directly, for example:
 <Row>
 ```
 
-### Component status
+### Tips and Tricks
 
-Sveltestrap is currently missing support for the following components:
-
-* [ ] Popover
-  * [ ] PopoverContent
-  * [ ] PopoverTitle
-* [ ] Tooltip
-
-Please follow (or help out with) these issues for status:
-
-<a href="https://github.com/bestguy/sveltestrap/issues/31">
-  Missing Tooltip (#31)
-</a>
-
-<a href="https://github.com/bestguy/sveltestrap/issues/32">
-  Missing Popover (#32)
-</a>
+#### Adding a new Component
+1. Create the Code
+   A. cp /src/Blank.svelte to NAME.svelte
+   B. add NAME to /src/index.js
+2. Setup Stories
+   A. cp -r /stories/blank to /stories/NAME
