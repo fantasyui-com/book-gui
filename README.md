@@ -65,7 +65,10 @@ it's recommended you import the component source directly, for example:
 
 #### Adding a new Component
 1. Create the Code
-   A. cp /src/Blank.svelte to NAME.svelte
-   B. add NAME to /src/index.js
-2. Setup Stories
-   A. cp -r /stories/blank to /stories/NAME
+    1. cp /src/Blank.svelte to NAME.svelte
+    2. add NAME to /src/index.js
+    3. Customize NAME.svelte
+2.  Setup Stories
+    1. cp -r /stories/blank to /stories/NAME
+    2. add NAME to stories/index.stories.js
+    3. Customize /stories/NAME
