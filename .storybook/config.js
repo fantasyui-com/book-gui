@@ -5,8 +5,8 @@ import pkg from '../package.json';
 // Option defaults:
 addParameters({
   options: {
-    name: `sveltestrap ${pkg.version}`,
-    url: 'https://github.com/bestguy/sveltestrap',
+    name: `bookui ${pkg.version}`,
+    url: 'https://github.com/fantasyui-com/bookui',
     panelPosition: 'right',
     showPanel: false
   },

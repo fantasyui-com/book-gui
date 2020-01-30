@@ -1,17 +1,17 @@
 {
-  "name": "sveltestrap",
+  "name": "bookui",
   "private": true,
   "version": "3.3.2",
-  "main": "dist/sveltestrap.js",
-  "module": "dist/sveltestrap.es.js",
-  "jsnext:main": "dist/sveltestrap.es.js",
+  "main": "dist/bookui.js",
+  "module": "dist/bookui.es.js",
+  "jsnext:main": "dist/bookui.es.js",
   "svelte": "src/index.js",
   "keywords": [
     "svelte"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/fantasyui-com/sveltestrap.git"
+    "url": "git+ssh://git@github.com/fantasyui-com/bookui.git"
   },
   "files": [
     "dist",
@@ -97,9 +97,9 @@
   "browserslist": "last 2 versions",
   "description": "![Logo](./logo.png)",
   "bugs": {
-    "url": "https://github.com/fantasyui-com/sveltestrap/issues"
+    "url": "https://github.com/fantasyui-com/bookui/issues"
   },
-  "homepage": "https://github.com/fantasyui-com/sveltestrap#readme",
+  "homepage": "https://github.com/fantasyui-com/bookui#readme",
   "directories": {
     "doc": "docs"
   },
