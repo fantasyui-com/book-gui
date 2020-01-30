@@ -1,10 +1,28 @@
-Extended Bootstrap Components
+Extended Bootstrap Components for Book Publishing
 
 [Demo page](https://fantasyui.com)
 
+## Components
+
+- [Illustration](src/Illustration.svelte) ([story](stories/illustration/Index.svelte))
+- [Business](src/Business.svelte) ([story](stories/business/Index.svelte))
+- [Link](src/Link.svelte) ([story](stories/link/Index.svelte))
+- [Poem](src/Poem.svelte) ([story](stories/poem/Index.svelte))
+- [Quote](src/Quote.svelte) ([story](stories/quote/Index.svelte))
+- [Text](src/Text.svelte) ([story](stories/text/Index.svelte))
+- [Youtube](src/Youtube.svelte) ([story](stories/youtube/Index.svelte))
+
+Atom users heads up: install Markdown Preview Plus to use the above for navigation (clickable links)
+
+## TODO
+
+- Remove svelite, leaving only the compatible build system.
+- Install svelite as a dependency
+
+
 ## Install
 
-`npm install --save ???`
+`npm install --save book-gui`
 
 ## Usage
 

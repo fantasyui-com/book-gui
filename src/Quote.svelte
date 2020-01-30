@@ -1,5 +1,5 @@
 <script>
-  import { Card, CardBody, CardImg, CardTitle } from "sveltestrap";
+  import { Card, CardBody, CardImg, CardTitle, CardText } from "sveltestrap";
 
   import clsx from 'clsx';
   import { clean } from './utils';
@@ -40,7 +40,7 @@
     {/if}
 
     {#each text as line, index}
-      <p>{@html line}</p>
+    <CardText>{@html line}</CardText>
     {/each}
 
     <slot/>

@@ -1,5 +1,5 @@
 <script>
-  import { Card, CardBody, CardImg, CardTitle } from "sveltestrap";
+  import { Card, CardBody, CardImg, CardTitle, CardText, Button } from "sveltestrap";
 
   import clsx from 'clsx';
   import { clean } from './utils';
@@ -35,13 +35,12 @@
   <CardImg src="{url}" alt="{title}"/>
 
   <CardBody>
-    {#if title}
-      <CardTitle class={classesCardTitle}>{title}</CardTitle>
-    {/if}
 
     {#each text as line, index}
-      <p>{@html line}</p>
+      <CardText>{@html line}</CardText>
     {/each}
+
+    <Button size="lg" color="primary" href="{url}">{title}</Button>
 
     <slot/>
 
