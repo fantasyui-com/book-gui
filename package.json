@@ -1,17 +1,16 @@
 {
-  "name": "bookui",
-  "private": true,
+  "name": "book-gui",
   "version": "3.3.2",
-  "main": "dist/bookui.js",
-  "module": "dist/bookui.es.js",
-  "jsnext:main": "dist/bookui.es.js",
+  "main": "dist/book-gui.js",
+  "module": "dist/book-gui.es.js",
+  "jsnext:main": "dist/book-gui.es.js",
   "svelte": "src/index.js",
   "keywords": [
     "svelte"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/fantasyui-com/bookui.git"
+    "url": "git+ssh://git@github.com/fantasyui-com/book-gui.git"
   },
   "files": [
     "dist",
@@ -97,9 +96,9 @@
   "browserslist": "last 2 versions",
   "description": "![Logo](./logo.png)",
   "bugs": {
-    "url": "https://github.com/fantasyui-com/bookui/issues"
+    "url": "https://github.com/fantasyui-com/book-gui/issues"
   },
-  "homepage": "https://github.com/fantasyui-com/bookui#readme",
+  "homepage": "https://github.com/fantasyui-com/book-gui#readme",
   "directories": {
     "doc": "docs"
   },

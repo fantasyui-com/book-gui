@@ -5,8 +5,8 @@ import pkg from '../package.json';
 // Option defaults:
 addParameters({
   options: {
-    name: `bookui ${pkg.version}`,
-    url: 'https://github.com/fantasyui-com/bookui',
+    name: `book-gui ${pkg.version}`,
+    url: 'https://github.com/fantasyui-com/book-gui',
     panelPosition: 'right',
     showPanel: false
   },
