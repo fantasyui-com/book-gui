@@ -24,7 +24,7 @@
     "prepublish": "npm run dist;  git add .; git commit -m 'New Release'; npm version patch;",
     "postpublish": "git push && git push --tags",
     "test": "jest --verbose",
-    "version": "npm run docs && git add -A docs"
+    "version": "npm run docs && cp -r public/book-images docs && git add -A docs"
   },
   "peerDependencies": {
     "svelte": "^3.4.4"
