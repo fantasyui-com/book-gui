@@ -5,6 +5,7 @@
   export let stacked = false;
   export let source;
   export let title;
+
 </script>
 
 <div class="py-3">
@@ -15,14 +16,17 @@
   <div class="border p-3">
     <h6 class="text-muted">EXAMPLE</h6>
     <Row>
-      <Col>
+
+      <Col class={stacked?'pb-5':undefined}>
         <slot />
       </Col>
+
       {#if source}
-        <Col xs={stacked ? 12 : undefined}>
-          <PrismCode class="language-html h-100">{source}</PrismCode>
-        </Col>
+      <Col xs={stacked ? 12 : undefined}>
+        <PrismCode class="language-html h-100">{source}</PrismCode>
+      </Col>
       {/if}
+
     </Row>
   </div>
 </div>

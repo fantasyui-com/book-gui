@@ -1,8 +1,10 @@
 <script>
-  import { Card, CardBody, CardImg, CardTitle, CardText } from "sveltestrap";
+  import { Card, CardBody, CardHeader, CardTitle, CardText, Button } from "sveltestrap";
 
   import clsx from 'clsx';
   import { clean } from './utils';
+
+  const SLOTS = $$props.$$slots;
 
   let className = '';
   export { className as class };
@@ -12,8 +14,9 @@
   export let style = '';
 
   // Widget Properties
-  export let title = '';
+  export let author = '';
   export let url = '';
+  export let source = '';
   export let text = [];
 
   const props = clean($$props);
@@ -21,7 +24,7 @@
   $: classes = clsx(
     className,
     'card',
-    'bg-danger',
+    'bg-secondary',
     'text-white'
   );
 
@@ -32,16 +35,16 @@
 </script>
 
 <Card {...props} {id} class={classes} on:click {style}>
-  <CardImg src="{url}" alt="{title}"/>
 
   <CardBody>
-    {#if title}
-      <CardTitle class={classesCardTitle}>{title}</CardTitle>
-    {/if}
 
-    {#each text as line, index}
-    <CardText>{@html line}</CardText>
-    {/each}
+    <blockquote class="blockquote mb-0">
+      <slot name="body"/>
+      {#each text as line, index}
+      <p>{@html line}</p>
+      {/each}
+      <footer class="blockquote-footer text-dark">{#if author}<Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0" >by {author}</Button>{/if}{#if source} in <cite title="{source}">{source}</cite>{/if}</footer>
+    </blockquote>
 
     <slot/>
 

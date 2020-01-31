@@ -4,13 +4,13 @@ Extended Bootstrap Components for Book Publishing
 
 ## Components
 
-- [Illustration](src/Illustration.svelte) ([story](stories/illustration/Index.svelte))
-- [Business](src/Business.svelte) ([story](stories/business/Index.svelte))
-- [Link](src/Link.svelte) ([story](stories/link/Index.svelte))
-- [Poem](src/Poem.svelte) ([story](stories/poem/Index.svelte))
-- [Quote](src/Quote.svelte) ([story](stories/quote/Index.svelte))
-- [Text](src/Text.svelte) ([story](stories/text/Index.svelte))
-- [Youtube](src/Youtube.svelte) ([story](stories/youtube/Index.svelte))
+- [Illustration](src/Illustration.svelte) ([story](stories/illustration/Index.svelte)/[sample](stories/illustration/Sample.svelte))
+- [Business](src/Business.svelte) ([story](stories/business/Index.svelte)/[sample](stories/business/Sample.svelte))
+- [Link](src/Link.svelte) ([story](stories/link/Index.svelte)/[sample](stories/link/Sample.svelte))
+- [Poem](src/Poem.svelte) ([story](stories/poem/Index.svelte)/[sample](stories/poem/Sample.svelte))
+- [Quote](src/Quote.svelte) ([story](stories/quote/Index.svelte)/[sample](stories/quote/Sample.svelte))
+- [Text](src/Text.svelte) ([story](stories/text/Index.svelte)/[sample](stories/text/Sample.svelte))
+- [Youtube](src/Youtube.svelte) ([story](stories/youtube/Index.svelte)/[sample](stories/youtube/Sample.svelte))
 
 Atom users heads up: install Markdown Preview Plus to use the above for navigation (clickable links)
 

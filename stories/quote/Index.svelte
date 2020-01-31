@@ -4,11 +4,11 @@
   import sampleSource from '!!raw-loader!./Sample.svelte';
 </script>
 
-<h1>Illustration Widget</h1>
-<a href="https://github.com/fantasyui-com/sveltestrap/blob/master/src/Illustration.svelte" rel="noopener noreferrer" target="_blank">
-  Illustration Widget
+<h1>Quote Widget</h1>
+<a href="https://github.com/fantasyui-com/sveltestrap/blob/master/src/Quote.svelte" rel="noopener noreferrer" target="_blank">
+  Quote Widget
 </a>
 
-<Example source={sampleSource}>
+<Example source={sampleSource} stacked>
   <Sample />
 </Example>

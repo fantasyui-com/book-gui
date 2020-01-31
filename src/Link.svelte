@@ -1,8 +1,10 @@
 <script>
-  import { Card, CardBody, CardImg, CardTitle, CardText, Button } from "sveltestrap";
-
+  import { Card, CardHeader, CardBody, CardText, Button } from "sveltestrap";
+  
   import clsx from 'clsx';
   import { clean } from './utils';
+
+  const SLOTS = $$props.$$slots;
 
   let className = '';
   export { className as class };
@@ -21,7 +23,7 @@
   $: classes = clsx(
     className,
     'card',
-    'bg-danger',
+    'bg-secondary',
     'text-white'
   );
 
@@ -32,17 +34,17 @@
 </script>
 
 <Card {...props} {id} class={classes} on:click {style}>
-  <CardImg src="{url}" alt="{title}"/>
+
+  <CardHeader><h5>{title}</h5></CardHeader>
 
   <CardBody>
-
+    <slot name="body"/>
     {#each text as line, index}
       <CardText>{@html line}</CardText>
     {/each}
-
-    <Button size="lg" color="primary" href="{url}">{title}</Button>
-
-    <slot/>
-
+    <Button color="primary" size="lg" href="{url}" rel="noopener noreferrer" target="_blank" class="mt-4 btn-block">{title}</Button>
   </CardBody>
+
+  <slot/>
+
 </Card>

@@ -1,8 +1,10 @@
 <script>
-  import { Card, CardBody, CardImg, CardTitle, CardText } from "sveltestrap";
+  import { Card, CardBody, CardHeader, CardTitle, CardText, Button } from "sveltestrap";
 
   import clsx from 'clsx';
   import { clean } from './utils';
+
+  const SLOTS = $$props.$$slots;
 
   let className = '';
   export { className as class };
@@ -13,6 +15,7 @@
 
   // Widget Properties
   export let title = '';
+  export let author = '';
   export let url = '';
   export let text = [];
 
@@ -21,7 +24,7 @@
   $: classes = clsx(
     className,
     'card',
-    'bg-danger',
+    'bg-secondary',
     'text-white'
   );
 
@@ -32,18 +35,19 @@
 </script>
 
 <Card {...props} {id} class={classes} on:click {style}>
-  <CardImg src="{url}" alt="{title}"/>
 
+  <CardHeader><h5>{title} <Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0" >by {author}</Button></h5></CardHeader>
+
+  <!-- print only if there is body slot or text --->
+  {#if (text.length > 0)||((SLOTS)&&(SLOTS.body))}
   <CardBody>
-    {#if title}
-      <CardTitle class={classesCardTitle}>{title}</CardTitle>
-    {/if}
-
+    <slot name="body"/>
     {#each text as line, index}
     <CardText>{@html line}</CardText>
     {/each}
-
-    <slot/>
-
   </CardBody>
+  {/if}
+
+  <slot/>
+
 </Card>

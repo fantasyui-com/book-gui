@@ -1,7 +1,11 @@
 <script>
-  import { Illustration } from 'sveltestrap';
+  import { Quote } from 'sveltestrap';
+
+  const text = [
+    `Victorious warriors win first and then go to war,
+     while defeated warriors go to war first and then seek to win.`
+  ];
+
 </script>
 
-<Illustration title="Hello Solar System" url="/bears.jpg" text="{['Hello', 'World']}">
-  Hello Continent
-</Illustration>
+<Quote author="Sun Tzu" url="https://en.wikipedia.org/wiki/Sun_Tzu" {text} class="shadow" style="max-width: 32rem;"/>

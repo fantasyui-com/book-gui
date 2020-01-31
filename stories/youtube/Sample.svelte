@@ -1,7 +1,5 @@
 <script>
-  import { Illustration } from 'sveltestrap';
+  import { Youtube } from 'sveltestrap';
 </script>
 
-<Illustration title="Hello Solar System" url="/bears.jpg" text="{['Hello', 'World']}">
-  Hello Continent
-</Illustration>
+<Youtube title="How to Bend a Spoon with Your Mind by Michael Shermer" video="mxSNuIx4m5k"/>
