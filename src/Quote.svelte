@@ -43,7 +43,7 @@
       {#each text as line, index}
       <p>{@html line}</p>
       {/each}
-      <footer class="blockquote-footer text-dark">{#if author}<Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0" >by {author}</Button>{/if}{#if source} in <cite title="{source}">{source}</cite>{/if}</footer>
+      <footer class="blockquote-footer text-dark">{#if author}<Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0">{author}</Button>{/if}{#if source} in <cite title="{source}">{source}</cite>{/if}</footer>
     </blockquote>
 
     <slot/>

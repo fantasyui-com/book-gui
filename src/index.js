@@ -84,6 +84,7 @@ import Poem from './Poem.svelte'
 import Quote from './Quote.svelte'
 import Text from './Text.svelte'
 import Youtube from './Youtube.svelte'
+import Subtitle from './Subtitle.svelte'
 
 export {
   Alert,
@@ -172,6 +173,8 @@ export {
   Quote,
   Text,
   Youtube,
+  Subtitle,
+
 }
 
 export const Sveltestrap = {
@@ -260,4 +263,6 @@ export const Sveltestrap = {
   Quote,
   Text,
   Youtube,
+  Subtitle,
+  
 }

@@ -36,6 +36,7 @@ import Poem from './poem/Index.svelte';
 import Quote from './quote/Index.svelte';
 import Text from './text/Index.svelte';
 import Youtube from './youtube/Index.svelte';
+import Subtitle from './subtitle/Index.svelte';
 
 
 
@@ -81,10 +82,11 @@ const story = Component => () => ({
   .add('Tooltip', story(Tooltip))
 
   storiesOf('Widgets', module)
+  .add('Subtitle', story(Subtitle))
+  .add('Text', story(Text))
   .add('Illustration', story(Illustration))
-  .add('Business', story(Business))
-  .add('Link', story(Link))
+  .add('Youtube', story(Youtube))
   .add('Poem', story(Poem))
   .add('Quote', story(Quote))
-  .add('Text', story(Text))
-  .add('Youtube', story(Youtube))
+  .add('Link', story(Link))
+  .add('Business', story(Business))
