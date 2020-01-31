@@ -1,6 +1,6 @@
 {
   "name": "book-gui",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "main": "dist/book-gui.js",
   "module": "dist/book-gui.es.js",
   "jsnext:main": "dist/book-gui.es.js",
