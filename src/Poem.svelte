@@ -36,7 +36,7 @@
 
 <Card {...props} {id} class={classes} on:click {style}>
 
-  <CardHeader><h5>{title} <Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0" >by {author}</Button></h5></CardHeader>
+  <CardHeader><h5>{title} <Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0">{#if author}by {author}{/if}</Button></h5></CardHeader>
 
   <!-- print only if there is body slot or text --->
   {#if (text.length > 0)||((SLOTS)&&(SLOTS.body))}
