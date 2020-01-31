@@ -2,4 +2,4 @@
   import { Youtube } from 'sveltestrap';
 </script>
 
-<Youtube title="How to Bend a Spoon with Your Mind by Michael Shermer" video="mxSNuIx4m5k"/>
+<Youtube title="How to Bend a Spoon with Your Mind by Michael Shermer" video="mxSNuIx4m5k" style="max-width: 32rem;"/>
