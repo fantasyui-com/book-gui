@@ -4,11 +4,8 @@
   import clsx from 'clsx';
   import { clean } from './utils';
 
-  const SLOTS = $$props.$$slots;
-
   let className = '';
   export { className as class };
-
 
   export let id = '';
   export let style = '';
@@ -27,29 +24,20 @@
     'text-white'
   );
 
-  $: classesCardTitle = clsx(
-    text.length == 0 ? 'mb-0' : false,
-  );
+  $: classesCardTitle = clsx( text.length == 0 ? 'mb-0' : false );
 
 </script>
 
 <Card {...props} {id} class={classes} on:click {style}>
-
   <CardImg src="{url}" alt="{title}"/>
-
-  <!-- print only if there is body slot or text --->
-  {#if (text.length > 0)||((SLOTS)&&(SLOTS.body))}
-  <CardBody>
-    {#if title}
-      <CardTitle class={classesCardTitle}><h5>{title}</h5></CardTitle>
-    {/if}
-    <slot name="body"/>
-    {#each text as line, index}
-      <CardText>{@html line}</CardText>
-    {/each}
-  </CardBody>
+  {#if text.length > 0}
+    <CardBody>
+      {#if title}
+        <CardTitle class={classesCardTitle}><h5>{title}</h5></CardTitle>
+      {/if}
+      {#each text as line, index}
+        <CardText>{@html line}</CardText>
+      {/each}
+    </CardBody>
   {/if}
-
-  <slot/>
-
 </Card>

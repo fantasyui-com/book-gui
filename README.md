@@ -11,6 +11,7 @@ Extended Bootstrap Components for Book Publishing
 - [Quote](src/Quote.svelte) ([story](stories/quote/Index.svelte)/[sample](stories/quote/Sample.svelte))
 - [Text](src/Text.svelte) ([story](stories/text/Index.svelte)/[sample](stories/text/Sample.svelte))
 - [Youtube](src/Youtube.svelte) ([story](stories/youtube/Index.svelte)/[sample](stories/youtube/Sample.svelte))
+- [Subtitle](src/Subtitle.svelte) ([story](stories/subtitle/Index.svelte)/[sample](stories/subtitle/Sample.svelte))
 
 Atom users heads up: install Markdown Preview Plus to use the above for navigation (clickable links)
 

@@ -4,11 +4,8 @@
   import clsx from 'clsx';
   import { clean } from './utils';
 
-  const SLOTS = $$props.$$slots;
-
   let className = '';
   export { className as class };
-
 
   export let id = '';
   export let style = '';
@@ -28,25 +25,17 @@
     'text-white'
   );
 
-  $: classesCardTitle = clsx(
-    text.length == 0 ? 'mb-0' : false,
-  );
-
 </script>
 
 <Card {...props} {id} class={classes} on:click {style}>
-
   <CardBody>
-
-    <blockquote class="blockquote mb-0">
-      <slot name="body"/>
-      {#each text as line, index}
-      <p>{@html line}</p>
-      {/each}
-      <footer class="blockquote-footer text-dark">{#if author}<Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0">{author}</Button>{/if}{#if source} in <cite title="{source}">{source}</cite>{/if}</footer>
-    </blockquote>
-
-    <slot/>
-
+    {#if text.length > 0}
+      <blockquote class="blockquote mb-0">
+        {#each text as line, index}
+          <p>{@html line}</p>
+        {/each}
+        <footer class="blockquote-footer text-dark">{#if author}<Button color="text" size="sm" href="{url}" rel="noopener noreferrer" target="_blank" class="text-dark p-0">{author}</Button>{/if}{#if source} in <cite title="{source}">{source}</cite>{/if}</footer>
+      </blockquote>
+    {/if}
   </CardBody>
 </Card>

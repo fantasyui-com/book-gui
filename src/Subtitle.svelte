@@ -4,11 +4,8 @@
   import clsx from 'clsx';
   import { clean } from './utils';
 
-  const SLOTS = $$props.$$slots;
-
   let className = '';
   export { className as class };
-
 
   export let id = '';
   export let style = '';
@@ -28,11 +25,7 @@
 </script>
 
 <Card {...props} {id} class={classes} on:click {style}>
-
   {#if title}
     <CardHeader><h3 class="text-center">{title}</h3></CardHeader>
   {/if}
-
-  <slot/>
-
 </Card>
